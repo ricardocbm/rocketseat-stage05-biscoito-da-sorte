@@ -1,0 +1,172 @@
+/* Define estilos padrão para todos os elementos, zerando margens e preenchimentos e usando a caixa de modelo de borda. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define o tamanho de fonte base em 62.5% (o que é 10px em relação ao tamanho padrão de 16px). */
+:root {
+  font-size: 62.5%; /* Tamanho de fonte base para facilitar a conversão de pixels (1 rem = 10px). */
+}
+
+/* Estilos para o corpo da página. */
+body {
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  font-size: 1.6rem; /* Define o tamanho de fonte base para o corpo do documento. */
+  display: grid; /*display-grid*/
+  place-items: center; /* Centraliza verticalmente e horizontalmente os elementos dentro do corpo. */
+  height: 100vh; /* Ocupa a altura total da janela de visualização. */
+}
+
+/* Define a família de fontes para o corpo, botão e entrada de texto. */
+body,
+button,
+input {
+  font-family: "Montserrat"; /* Define a fonte padrão para esses elementos. */
+}
+
+/* Classe para esconder elementos. */
+.hide {
+  display: none; /* Oculta elementos com essa classe definindo o display para "none". */
+}
+
+/* Estilos para o elemento principal. */
+main {
+  background: #fff; /* Cor de fundo do elemento principal. */
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8); /* Sombra leve. */
+  border-radius: 5px; /* Bordas arredondadas. */
+  padding: 4.8rem 6.5rem 6.4rem 6.5rem; /* Preenchimento interno. */
+  width: min(
+    45rem,
+    90%
+  ); /* Define a largura máxima para 42.8rem ou 90% da largura da janela. */
+  margin-top: ; /* Desloca o elemento para cima, posicionando-o centralmente. */
+}
+
+/* Estilos para a tela 1. */
+
+h1 {
+  font-family: "Montserrat"; /* Define a fonte do título. */
+  font-size: 2.4rem; /* Tamanho de fonte do título. */
+  font-weight: 700;
+  margin-bottom: 1.4rem; /* Espaço inferior do título. */
+  text-align: center;
+}
+
+h1,
+p {
+  color: #34355b; /* Cor do texto para título e parágrafo. */
+}
+
+p {
+  font-family: "DM Sans"; /* Define uma opacidade de 80% para o parágrafo. */
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.image-container {
+  position: relative; /* Define a posição como relativa para controlar o posicionamento dos elementos filhos */
+  width: 200px; /* Defina o tamanho desejado para a imagem (largura) */
+  height: 200px; /* Defina o tamanho desejado para a imagem (altura) */
+  transition: transform 0.5s; /* Adiciona uma transição suave de 0.5 segundos quando ocorre uma transformação */
+  margin-top: 2.6rem; /* Define a margem superior para posicionar o contêiner */
+
+  cursor: pointer;
+}
+
+.image-container:hover {
+  animation: shake 0.5s infinite; /* Inicia a animação "shake" com uma duração de 0.5 segundos e a torna infinita quando o mouse passa sobre o contêiner */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(
+      0,
+      0
+    ); /* A posição inicial (0%) é a posição atual da imagem */
+  }
+  10% {
+    transform: translate(-5px, 0);
+  }
+  20% {
+    transform: translate(5px, 0);
+  }
+  30% {
+    transform: translate(-5px, 0);
+  }
+  40% {
+    transform: translate(5px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  60% {
+    transform: translate(5px, 0);
+  }
+  70% {
+    transform: translate(-5px, 0);
+  }
+  80% {
+    transform: translate(5px, 0);
+  }
+  90% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0); /* Retorna a imagem à posição inicial (100%) */
+  }
+}
+
+/* Estilos para a tela 2. */
+
+.tela2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tela2 .mensagem {
+  padding: 10px;
+
+  gap: 10px;
+
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+
+  margin-top: 1.7rem;
+}
+
+.tela2 .mensagem p {
+  color: #000;
+  text-align: center;
+  font-family: Dancing Script;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.tela2 .image-container-biscoito-aberto {
+  margin-top: 6rem; /* Define a margem superior para posicionar o contêiner */
+  margin-bottom: 6rem;
+}
+
+.tela2 button {
+  margin: 0 auto;
+
+  border-radius: 4px;
+  border-color: transparent;
+  background: #ff9500;
+
+  padding: 1.6rem;
+  gap: 1rem;
+
+  cursor: pointer; /* O cursor muda para uma mão quando passa sobre o botão. */
+}
+
+/* Efeito de hover nos botões. */
+button:hover {
+  background-color: #f5ae4a; /* Altera a cor de fundo quando o mouse passa sobre o botão. */
+}
